@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
 
@@ -28,16 +29,21 @@ class ViewController: UIViewController {
         
         label.textAlignment = . center
         
-        label.translatesAutoresizingMaskIntoConstraints = false
+//            label.translatesAutoresizingMaskIntoConstraints = false
+//            
+//            label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,
+//            constant: 150).isActive = true
+//            
+//            label.leadingAnchor.constraint(equalTo:
+//            view.safeAreaLayoutGuide.leadingAnchor, constant: 40).isActive = true
+//            
+//            view.safeAreaLayoutGuide.trailingAnchor.constraint(equalTo:
+//            label.trailingAnchor, constant: 40) .isActive = true
         
-        label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,
-        constant: 150).isActive = true
-        
-        label.leadingAnchor.constraint(equalTo:
-        view.safeAreaLayoutGuide.leadingAnchor, constant: 40).isActive = true
-        
-        view.safeAreaLayoutGuide.trailingAnchor.constraint(equalTo:
-        label.trailingAnchor, constant: 40) .isActive = true
+        label.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide).inset(100)
+            make.leading.equalTo(view.safeAreaLayoutGuide)
+        }
     }
 
 
