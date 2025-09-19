@@ -42,7 +42,8 @@ class ViewController: UIViewController {
         
         label.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).inset(100)
-            make.leading.equalTo(view.safeAreaLayoutGuide)
+            make.leading.equalTo(view.safeAreaLayoutGuide).inset(40)
+            make.trailing.equalTo(view.safeAreaLayoutGuide).inset(40)
         }
     }
 
