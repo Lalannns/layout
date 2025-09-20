@@ -10,6 +10,21 @@ import SnapKit
 
 class ViewController: UIViewController {
 
+    
+    lazy var TextField1: UITextField = {
+        let textField = UITextField()
+        textField.borderStyle = .roundedRect
+        textField.placeholder = "Enter text"
+        return textField
+    }()
+    
+    lazy var TextField2: UITextField = {
+        let textField = UITextField()
+        textField.borderStyle = .roundedRect
+        textField.placeholder = "Enter text"
+        return textField
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
